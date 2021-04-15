@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;  
+}
+
+html {
+  font-size: 100%;  
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main.container {
+  background: white;
+  min-height: 40vh;
+  min-width: 20vw;
+  max-width: 350px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+main h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+main h1::before {
+  content: '';
+  background-image: linear-gradient(45deg, #8e2de2, #4a00e0);
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  left: 0;
+  bottom: 2px;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.input-field input{
+  border: none;
+  width: 100%;  
+  font-size: 0.875rem;
+  outline: none;
+  padding: 0.2rem;
+}
+
+.input-field input::placeholder{    
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.input-field label{
+  font-size: 0.875rem;
+}
+
+.input-field .underline::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  bottom: -2px;
+}
+
+.input-field .underline::after {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  left: 0;
+  bottom: -2px;
+  transform:scaleX(0); 
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+  transform: scaleX(1);
+}
+
+.input-field input:focus {
+  background: rgba(75, 0, 224, 0.1);
+}
+
+input[type="submit"]{
+  border: none;
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 0.05rem;    
+  background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  letter-spacing: 0.1rem;
+  background-image: linear-gradient(to left, #8e2de2, #4a00e0);
+}
+
+input[type="submit"]:focus {
+  outline: 1px solid #8e2de2;
+}
+
+.social-media-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-login p{
+  font-size: 0.75rem;
+}
+
+.social-media-links {
+  margin-top: 1rem; 
+  width: 100%; 
+}
+
+.social-media-link {
+  border-radius: 5px;   
+  font-size: 0.75rem;
+}
+
+.social-media-link a{
+  text-decoration: none;  
+  color: white;  
+  display: block;
+  padding: 0.4rem;
+}
+
+.social-media-link a i{
+  width: 1.5rem;
+  margin-left: 0.75rem;
+}
+
+.social-media-links .twitter{
+  background-image: linear-gradient(to right, #0F73D2, #2e689e);
+  margin-bottom: 1rem;
+}
+
+.social-media-links .facebook{
+  background-image: linear-gradient(to right, #183C72, #2A5298);
+}
+
+.social-media-links .twitter:hover{
+  background-image: linear-gradient(to left, #0F73D2, #2e689e);
+  margin-bottom: 1rem;
+}
+
+.social-media-links .facebook:hover{
+  background-image: linear-gradient(to left, #183C72, #2A5298);
+}
+
+.social-media-link a:focus{
+  outline: 1px solid #8e2de2;
+}
+
+@media screen and (max-width: 400px) {
+  main.container {
+    max-width: 80vw;  
+  }    
+}
+
+@media screen and (min-width: 2500px) {
+  main.container {
+    min-height: 30vh;                 
+  }
+}
